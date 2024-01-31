@@ -20,16 +20,16 @@ function KaupanValinta({ kaupat, setValittuKauppa, map }) {
         
       });
 
-      // Kun zoomaus on valmis, avaa popup
+
       map.once('zoomend', () => {
-        // Luodaan marker valitulle kaupalle
+
         const marker = L.marker(kauppa.sijainti);
 
-        // Luodaan ja avataan popup kyseisessä markerissa
+      
         marker.addTo(map).bindPopup(`<b>${kauppa.aika}</b>`).openPopup();
       });
 
-      setValittuKauppa(kauppa); // Päivitä valittu kauppa tilassa
+      setValittuKauppa(kauppa);
     }
   };
 
@@ -47,9 +47,9 @@ function App() {
   const [map, setMap] = useState(null);
   const [valittuKauppa, setValittuKauppa] = useState(null);
 
-  // useEffect-hook varmistaa, että kartan tila on asetettu
+
   useEffect(() => {
-    if (!map && window.L) { // Tarkista, että Leaflet on ladattu
+    if (!map && window.L) { 
       const initializeMap = () => {
         const mapInstance = L.map('map', {
           center: [60.192059, 24.945831],
@@ -65,7 +65,7 @@ function App() {
 
       initializeMap();
     }
-  }, [map]); // Riippuvuuslistaan lisätään 'map', jotta tämä koodi suoritetaan vain kerran
+  }, [map]); 
 
   return (
     <div>
