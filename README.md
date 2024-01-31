@@ -1,0 +1,1 @@
+Tein yksinkertaisen sovelluksen react leafletilla. Ohjelmassa on oikealla valikko, josta voi valita kaupan ja sen jälkeen kartta siirtyy automaattisesti kyseisen kaupan kohdalle. Sen jälkeen aukeaa popup-markker, jossa on kaupan aukioloajat.
